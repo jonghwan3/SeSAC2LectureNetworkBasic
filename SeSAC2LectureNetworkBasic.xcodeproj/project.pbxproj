@@ -20,6 +20,17 @@
 		6AAA2ACF2892237800901551 /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAA2ACE2892237800901551 /* LottoViewController.swift */; };
 		6AE7BB7A2892306600CDB691 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE7BB792892306600CDB691 /* TranslateViewController.swift */; };
 		6AE7BB7C28923ACF00CDB691 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE7BB7B28923ACF00CDB691 /* WebViewController.swift */; };
+		6AE7BB7E28935D4C00CDB691 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE7BB7D28935D4C00CDB691 /* LocationViewController.swift */; };
+		6AE7BB84289384D100CDB691 /* SCDream3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AE7BB81289384D100CDB691 /* SCDream3.otf */; };
+		6AE7BB85289384D100CDB691 /* SCDream5.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AE7BB82289384D100CDB691 /* SCDream5.otf */; };
+		6AE7BB86289384D100CDB691 /* SCDream1.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AE7BB83289384D100CDB691 /* SCDream1.otf */; };
+		6AE7BB882897527600CDB691 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE7BB872897527600CDB691 /* ReusableViewProtocol.swift */; };
+		6AE7BB8B2897578F00CDB691 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE7BB8A2897578F00CDB691 /* Constant.swift */; };
+		6AE7BB8D28975FF200CDB691 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE7BB8C28975FF200CDB691 /* UserDefaultsHelper.swift */; };
+		6AE7BB9028977CD400CDB691 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6AE7BB8F28977CD400CDB691 /* Alamofire */; };
+		6AE7BB9328977CE300CDB691 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 6AE7BB9228977CE300CDB691 /* SwiftyJSON */; };
+		6AE7BB95289806FE00CDB691 /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE7BB94289806FE00CDB691 /* BeerViewController.swift */; };
+		6AE7BB9828980A9A00CDB691 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6AE7BB9728980A9A00CDB691 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +49,14 @@
 		6AAA2ACE2892237800901551 /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
 		6AE7BB792892306600CDB691 /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		6AE7BB7B28923ACF00CDB691 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		6AE7BB7D28935D4C00CDB691 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		6AE7BB81289384D100CDB691 /* SCDream3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream3.otf; sourceTree = "<group>"; };
+		6AE7BB82289384D100CDB691 /* SCDream5.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream5.otf; sourceTree = "<group>"; };
+		6AE7BB83289384D100CDB691 /* SCDream1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream1.otf; sourceTree = "<group>"; };
+		6AE7BB872897527600CDB691 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
+		6AE7BB8A2897578F00CDB691 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		6AE7BB8C28975FF200CDB691 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		6AE7BB94289806FE00CDB691 /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AE7BB9828980A9A00CDB691 /* Kingfisher in Frameworks */,
+				6AE7BB9328977CE300CDB691 /* SwiftyJSON in Frameworks */,
+				6AE7BB9028977CD400CDB691 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,11 +92,15 @@
 		6A68FA232890DD7300AF6851 /* SeSAC2LectureNetworkBasic */ = {
 			isa = PBXGroup;
 			children = (
+				6AE7BB892897577E00CDB691 /* Constant */,
+				6AE7BB802893843600CDB691 /* Resource */,
 				6AAA2ACB28920CA000901551 /* Protocol */,
 				6A68FA242890DD7300AF6851 /* AppDelegate.swift */,
 				6A68FA262890DD7300AF6851 /* SceneDelegate.swift */,
 				6A68FA282890DD7300AF6851 /* ViewController.swift */,
 				6A68FA2A2890DD7300AF6851 /* Main.storyboard */,
+				6AE7BB94289806FE00CDB691 /* BeerViewController.swift */,
+				6AE7BB7D28935D4C00CDB691 /* LocationViewController.swift */,
 				6AE7BB7B28923ACF00CDB691 /* WebViewController.swift */,
 				6AE7BB792892306600CDB691 /* TranslateViewController.swift */,
 				6AAA2ACE2892237800901551 /* LottoViewController.swift */,
@@ -92,8 +118,28 @@
 			isa = PBXGroup;
 			children = (
 				6AAA2ACC28920CD600901551 /* ViewPresentableProtocol.swift */,
+				6AE7BB872897527600CDB691 /* ReusableViewProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		6AE7BB802893843600CDB691 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6AE7BB83289384D100CDB691 /* SCDream1.otf */,
+				6AE7BB81289384D100CDB691 /* SCDream3.otf */,
+				6AE7BB82289384D100CDB691 /* SCDream5.otf */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		6AE7BB892897577E00CDB691 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				6AE7BB8A2897578F00CDB691 /* Constant.swift */,
+				6AE7BB8C28975FF200CDB691 /* UserDefaultsHelper.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +158,11 @@
 			dependencies = (
 			);
 			name = SeSAC2LectureNetworkBasic;
+			packageProductDependencies = (
+				6AE7BB8F28977CD400CDB691 /* Alamofire */,
+				6AE7BB9228977CE300CDB691 /* SwiftyJSON */,
+				6AE7BB9728980A9A00CDB691 /* Kingfisher */,
+			);
 			productName = SeSAC2LectureNetworkBasic;
 			productReference = 6A68FA212890DD7300AF6851 /* SeSAC2LectureNetworkBasic.app */;
 			productType = "com.apple.product-type.application";
@@ -140,6 +191,11 @@
 				Base,
 			);
 			mainGroup = 6A68FA182890DD7200AF6851;
+			packageReferences = (
+				6AE7BB8E28977CD400CDB691 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				6AE7BB9128977CE300CDB691 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				6AE7BB9628980A9A00CDB691 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 6A68FA222890DD7300AF6851 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -154,8 +210,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AE7BB84289384D100CDB691 /* SCDream3.otf in Resources */,
+				6AE7BB86289384D100CDB691 /* SCDream1.otf in Resources */,
 				6A68FA312890DD7500AF6851 /* LaunchScreen.storyboard in Resources */,
 				6A68FA412890E52B00AF6851 /* ListTableViewCell.xib in Resources */,
+				6AE7BB85289384D100CDB691 /* SCDream5.otf in Resources */,
 				6A68FA2E2890DD7500AF6851 /* Assets.xcassets in Resources */,
 				6A68FA2C2890DD7300AF6851 /* Main.storyboard in Resources */,
 			);
@@ -169,14 +228,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A68FA292890DD7300AF6851 /* ViewController.swift in Sources */,
+				6AE7BB8D28975FF200CDB691 /* UserDefaultsHelper.swift in Sources */,
+				6AE7BB95289806FE00CDB691 /* BeerViewController.swift in Sources */,
 				6AE7BB7C28923ACF00CDB691 /* WebViewController.swift in Sources */,
 				6A68FA252890DD7300AF6851 /* AppDelegate.swift in Sources */,
 				6A68FA392890E1F700AF6851 /* SearchViewController.swift in Sources */,
 				6AAA2ACF2892237800901551 /* LottoViewController.swift in Sources */,
+				6AE7BB7E28935D4C00CDB691 /* LocationViewController.swift in Sources */,
 				6A68FA272890DD7300AF6851 /* SceneDelegate.swift in Sources */,
 				6AE7BB7A2892306600CDB691 /* TranslateViewController.swift in Sources */,
 				6AAA2ACD28920CD600901551 /* ViewPresentableProtocol.swift in Sources */,
+				6AE7BB882897527600CDB691 /* ReusableViewProtocol.swift in Sources */,
 				6A68FA402890E52B00AF6851 /* ListTableViewCell.swift in Sources */,
+				6AE7BB8B2897578F00CDB691 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +458,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6AE7BB8E28977CD400CDB691 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		6AE7BB9128977CE300CDB691 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		6AE7BB9628980A9A00CDB691 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6AE7BB8F28977CD400CDB691 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AE7BB8E28977CD400CDB691 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		6AE7BB9228977CE300CDB691 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AE7BB9128977CE300CDB691 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		6AE7BB9728980A9A00CDB691 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AE7BB9628980A9A00CDB691 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6A68FA192890DD7200AF6851 /* Project object */;
 }

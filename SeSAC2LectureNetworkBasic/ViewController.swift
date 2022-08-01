@@ -35,14 +35,9 @@ class ViewController: UIViewController, ViewPresentableProtocol, UITableViewDele
         
     }
     
-    
-    
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
@@ -54,6 +49,15 @@ class ViewController: UIViewController, ViewPresentableProtocol, UITableViewDele
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UserDefaultsHelper.standard.nickname = "고래밥"
+        
+        title = UserDefaultsHelper.standard.nickname
+    
+        UserDefaultsHelper.standard.age = 80
+        
+        print(UserDefaultsHelper.standard.age)
+        
     }
 
 

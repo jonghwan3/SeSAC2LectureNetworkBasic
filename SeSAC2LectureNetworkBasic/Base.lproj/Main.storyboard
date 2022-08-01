@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JU1-uo-hJD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QAt-HO-Yye">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -68,7 +68,7 @@
                                 </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZuF-ZH-fmg">
-                                <rect key="frame" x="67" y="438" width="280" height="20.5"/>
+                                <rect key="frame" x="85.5" y="438" width="243" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kk0-4y-bPt">
                                         <rect key="frame" x="0.0" y="0.0" width="21" height="20.5"/>
@@ -112,12 +112,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ra1-gx-AqF">
-                                        <rect key="frame" x="259" y="0.0" width="21" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -133,11 +127,74 @@
                     </view>
                     <connections>
                         <outlet property="numberTextField" destination="iWf-2p-aFi" id="RFU-CL-vVq"/>
+                        <outletCollection property="lottoLabelCollection" destination="Kk0-4y-bPt" collectionClass="NSMutableArray" id="Qer-Up-kpz"/>
+                        <outletCollection property="lottoLabelCollection" destination="8p3-TG-JSM" collectionClass="NSMutableArray" id="6b7-ib-2TI"/>
+                        <outletCollection property="lottoLabelCollection" destination="YgL-x0-iOx" collectionClass="NSMutableArray" id="UsE-WI-k1r"/>
+                        <outletCollection property="lottoLabelCollection" destination="DpB-1f-Fbx" collectionClass="NSMutableArray" id="I8a-EY-rme"/>
+                        <outletCollection property="lottoLabelCollection" destination="NTz-IV-fUc" collectionClass="NSMutableArray" id="Ej6-Vt-XHl"/>
+                        <outletCollection property="lottoLabelCollection" destination="sjR-jv-1eR" collectionClass="NSMutableArray" id="bZA-Ly-OId"/>
+                        <outletCollection property="lottoLabelCollection" destination="kTE-fo-nyX" collectionClass="NSMutableArray" id="cof-jt-bWk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KO9-wz-eer" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="997.10144927536237" y="99.776785714285708"/>
+        </scene>
+        <!--Beer View Controller-->
+        <scene sceneID="iPi-N4-C8z">
+            <objects>
+                <viewController id="QAt-HO-Yye" customClass="BeerViewController" customModule="SeSAC2LectureNetworkBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zlf-s7-zz1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvO-RW-p2Y">
+                                <rect key="frame" x="40" y="602" width="334" height="60"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.98823529409999999" blue="0.22513455760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="NRB-SS-W2V"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="QAt-HO-Yye" eventType="touchUpInside" id="6ZN-m3-ooG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6m-uG-8pC">
+                                <rect key="frame" x="150" y="521" width="114" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ndk-yY-XQ9">
+                                <rect key="frame" x="80" y="248" width="254" height="203"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ndk-yY-XQ9" secondAttribute="height" multiplier="15:12" id="iMu-A2-NLa"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MJH-nu-xsW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MJH-nu-xsW" firstAttribute="bottom" secondItem="bvO-RW-p2Y" secondAttribute="bottom" constant="200" id="44n-Xa-Li7"/>
+                            <constraint firstItem="ndk-yY-XQ9" firstAttribute="leading" secondItem="MJH-nu-xsW" secondAttribute="leading" constant="80" id="8mD-vD-nfL"/>
+                            <constraint firstItem="bvO-RW-p2Y" firstAttribute="leading" secondItem="MJH-nu-xsW" secondAttribute="leading" constant="40" id="GGK-Pl-iwQ"/>
+                            <constraint firstItem="Q6m-uG-8pC" firstAttribute="centerX" secondItem="Zlf-s7-zz1" secondAttribute="centerX" id="Lnd-vJ-KUF"/>
+                            <constraint firstItem="MJH-nu-xsW" firstAttribute="trailing" secondItem="bvO-RW-p2Y" secondAttribute="trailing" constant="40" id="lr4-AC-DxT"/>
+                            <constraint firstItem="Q6m-uG-8pC" firstAttribute="leading" relation="lessThanOrEqual" secondItem="MJH-nu-xsW" secondAttribute="leading" constant="150" id="mZs-Gn-ap3"/>
+                            <constraint firstItem="bvO-RW-p2Y" firstAttribute="top" secondItem="Q6m-uG-8pC" secondAttribute="bottom" constant="60" id="nM6-eP-gI6"/>
+                            <constraint firstItem="MJH-nu-xsW" firstAttribute="trailing" secondItem="ndk-yY-XQ9" secondAttribute="trailing" constant="80" id="tbl-nr-yuc"/>
+                            <constraint firstItem="Q6m-uG-8pC" firstAttribute="top" secondItem="ndk-yY-XQ9" secondAttribute="bottom" constant="70" id="y9c-BZ-0Ej"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="beerImageView" destination="ndk-yY-XQ9" id="9ir-Ip-tvM"/>
+                        <outlet property="beerLabel" destination="Q6m-uG-8pC" id="cuK-02-7q4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="05b-aO-Ugv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="819"/>
         </scene>
         <!--Translate View Controller-->
         <scene sceneID="t20-gO-IMw">
@@ -263,6 +320,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4I-Gb-ZUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2615.9420289855075" y="99.776785714285708"/>
+        </scene>
+        <!--Location View Controller-->
+        <scene sceneID="ozH-uz-Rl1">
+            <objects>
+                <viewController id="5Ne-Tv-YvD" customClass="LocationViewController" customModule="SeSAC2LectureNetworkBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3UR-2g-Ozi" customClass="Located">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tJ-i1-Qa4">
+                                <rect key="frame" x="20" y="64" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uEV-tt-Ptt"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Local Notification"/>
+                                <connections>
+                                    <action selector="notificationButtonClicked:" destination="5Ne-Tv-YvD" eventType="touchUpInside" id="n8d-0M-W3D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jLa-rf-yYt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jLa-rf-yYt" firstAttribute="trailing" secondItem="6tJ-i1-Qa4" secondAttribute="trailing" constant="20" id="0MF-QR-IDA"/>
+                            <constraint firstItem="6tJ-i1-Qa4" firstAttribute="leading" secondItem="jLa-rf-yYt" secondAttribute="leading" constant="20" id="eJ9-zn-VxY"/>
+                            <constraint firstItem="6tJ-i1-Qa4" firstAttribute="top" secondItem="jLa-rf-yYt" secondAttribute="top" constant="20" id="xbS-Bv-M53"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="afZ-Ub-zm3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3652" y="100"/>
         </scene>
     </scenes>
     <resources>
