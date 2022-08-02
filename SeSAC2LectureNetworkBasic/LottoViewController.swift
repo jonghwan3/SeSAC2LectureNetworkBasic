@@ -32,18 +32,30 @@ class LottoViewController: UIViewController {
         lottoPickerView.delegate = self
         lottoPickerView.dataSource = self
         
-        pickerView(lottoPickerView, didSelectRow: 0, inComponent: 0)
+        numberTextField.text = "\(getCurrentNumber())회차"
+        
+        requestLotto(number: getCurrentNumber())
     }
     
-    @IBAction func numberTextFieldDidEndOnExit(_ sender: UITextField) {
+    func getCurrentNumber() -> Int {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        //2022년 7월 30일 ~ 2022년 8월 6일 1026회차
+        let referDate: Date! = formatter.date(from: "2022-07-30")
+        let referNumber = 1026
+        
+        //2022년 8월 07일 ~ 2022년 8월 14일 1027회차
+        let offsetComps = Calendar.current.dateComponents([.day], from: referDate, to: Calendar.current.startOfDay(for: Date.now))
+        let idx = offsetComps.day! / 7
+        
+        return referNumber + idx
         
     }
-    
     
     func requestLotto(number: Int) {
         
         //AF: 200~299 status code 301
-        let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"
+        let url = "\(EndPoint.lottoURL)&drwNo=\(number)"
         AF.request(url, method: .get).validate(statusCode: 200..<299).responseJSON { response in
             switch response.result {
             case .success(let value):
@@ -77,6 +89,7 @@ extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         requestLotto(number: numberList[row])
         numberTextField.text = "\(numberList[row])회차"
+        //view.endEditing(true)
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

@@ -13,6 +13,22 @@ import Foundation
 //    case Setting
 //}
 
+struct APIKey {
+    static let BOXOFFICE = "54fdab2c76b86023a519f90cf914ac62"
+    
+    static let NAVER_ID = "OTt0y7wh5Ox8bhsrJ6f7"
+    static let NAVER_SECRET = "mqxHVdg7hG"
+    
+    static let TMBD = "065cad0114ed07db03e6530887bebf88"
+}
+
+struct EndPoint {
+    static let boxOfficeURL = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?"
+    static let lottoURL = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber"
+    static let translateURL = "https://openapi.naver.com/v1/papago/n2mt"
+    static let beerURL = "https://api.punkapi.com/v2/beers"
+}
+
 struct StoryboardName {
 
     //접근제어를 통해 초기화 방지

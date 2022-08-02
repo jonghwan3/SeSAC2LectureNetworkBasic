@@ -11,36 +11,76 @@ import Alamofire
 import Kingfisher
 import SwiftyJSON
 
-class BeerViewController: UIViewController {
+class BeerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    @IBOutlet weak var beerImageView: UIImageView!
-    @IBOutlet weak var beerLabel: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var list: [BeerModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        collectionView.register(UINib(nibName: BeerCollectionViewCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: BeerCollectionViewCell.reuseIdentifier)
+        
+        let layout = UICollectionViewFlowLayout()
+                let spacing: CGFloat = UIScreen.main.bounds.width * 0
+                let sectionSpacing: CGFloat = UIScreen.main.bounds.width * 0.03
+                let width = (UIScreen.main.bounds.width - spacing * 2 - sectionSpacing * 2) / 3
+        layout.itemSize = CGSize(width: width, height: width * 2.4)
+                layout.scrollDirection = .vertical
+                layout.sectionInset = UIEdgeInsets(top: sectionSpacing, left: sectionSpacing, bottom: sectionSpacing, right: sectionSpacing)
+                layout.minimumInteritemSpacing = spacing
+                layout.minimumLineSpacing = spacing
+                collectionView.collectionViewLayout = layout
+        
+        requestRandomBeer()
     }
     
     func requestRandomBeer() {
-        let url = "https://api.punkapi.com/v2/beers/random"
+        let url = EndPoint.beerURL
         AF.request(url, method: .get).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
                 print("JSON: \(json)")
-                self.beerLabel.text = json[0]["name"].stringValue
-                let url = URL(string: json[0]["image_url"].stringValue)
-                self.beerImageView.kf.setImage(with: url)
+               
+                for beer in json.arrayValue {
+                    let beerTitle = beer["name"].stringValue
+                    let beerURL = beer["image_url"].stringValue
+                    let descript = beer["description"].stringValue
+                    let data = BeerModel(beerTitle: beerTitle, imgURL: beerURL, descrpt: descript)
+                    
+                    self.list.append(data)
+                }
+                
+                self.collectionView.reloadData()
                 
             case .failure(let error):
                 print(error)
             }
             
         }
-        
-        
     }
-    @IBAction func buttonClicked(_ sender: UIButton) {
-        requestRandomBeer()
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return list.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BeerCollectionViewCell.reuseIdentifier, for: indexPath) as? BeerCollectionViewCell else { return UICollectionViewCell() }
+        
+        cell.beerNameLabel.text = list[indexPath.item].beerTitle
+        
+        let url = URL(string: list[indexPath.item].imgURL ?? "")
+        cell.beerImageView.kf.setImage(with: url)
+        
+        cell.beerDescriptionLabel.text = list[indexPath.item].descrpt ?? ""
+        
+        return cell
+        
     }
     
 }
