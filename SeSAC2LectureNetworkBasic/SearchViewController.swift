@@ -61,9 +61,17 @@ class SearchViewController: UIViewController, ViewPresentableProtocol, UITableVi
     
     func getYesterday() -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyyMMdd"
+        formatter.dateFormat = "yyyyMMdd" //TMI -> "yyyyMMdd" "YYYYMMdd" (주 단위 년도라, 12월쯤 달라질 수 있음)
+//        let date = Date(timeIntervalSinceNow: -86400)
+        let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: Date())
         
-        let str = formatter.string(from: Date.now - 86400)
+//        let str = formatter.string(from: Date.now - 86400)
+        let str = formatter.string(from: yesterday!)
+        
+        //네트워크 통신: 서버 점검 등에 대한 예외 처리
+        //네트워크 느린 환경 테스트:
+        //  실기기 테스트 시 Condition 조절 가능!
+        //  시뮬레이터에서도 가능! (추가 설치)
         
         return str
     }

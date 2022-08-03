@@ -10,6 +10,9 @@
 		6A2747362899505D0077EFAA /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2747342899505D0077EFAA /* BeerCollectionViewCell.swift */; };
 		6A2747372899505D0077EFAA /* BeerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A2747352899505D0077EFAA /* BeerCollectionViewCell.xib */; };
 		6A274739289952DD0077EFAA /* BeerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A274738289952DD0077EFAA /* BeerModel.swift */; };
+		6A274777289A09430077EFAA /* ImageSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A274776289A09430077EFAA /* ImageSearchViewController.swift */; };
+		6A27477A289AC7EC0077EFAA /* ImageSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A274778289AC7EC0077EFAA /* ImageSearchCollectionViewCell.swift */; };
+		6A27477B289AC7EC0077EFAA /* ImageSearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A274779289AC7EC0077EFAA /* ImageSearchCollectionViewCell.xib */; };
 		6A68FA252890DD7300AF6851 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A68FA242890DD7300AF6851 /* AppDelegate.swift */; };
 		6A68FA272890DD7300AF6851 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A68FA262890DD7300AF6851 /* SceneDelegate.swift */; };
 		6A68FA292890DD7300AF6851 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A68FA282890DD7300AF6851 /* ViewController.swift */; };
@@ -41,6 +44,9 @@
 		6A2747342899505D0077EFAA /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
 		6A2747352899505D0077EFAA /* BeerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCollectionViewCell.xib; sourceTree = "<group>"; };
 		6A274738289952DD0077EFAA /* BeerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerModel.swift; sourceTree = "<group>"; };
+		6A274776289A09430077EFAA /* ImageSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchViewController.swift; sourceTree = "<group>"; };
+		6A274778289AC7EC0077EFAA /* ImageSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		6A274779289AC7EC0077EFAA /* ImageSearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageSearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		6A68FA212890DD7300AF6851 /* SeSAC2LectureNetworkBasic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC2LectureNetworkBasic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A68FA242890DD7300AF6851 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A68FA262890DD7300AF6851 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +113,9 @@
 				6A68FA262890DD7300AF6851 /* SceneDelegate.swift */,
 				6A68FA282890DD7300AF6851 /* ViewController.swift */,
 				6A68FA2A2890DD7300AF6851 /* Main.storyboard */,
+				6A274776289A09430077EFAA /* ImageSearchViewController.swift */,
+				6A274778289AC7EC0077EFAA /* ImageSearchCollectionViewCell.swift */,
+				6A274779289AC7EC0077EFAA /* ImageSearchCollectionViewCell.xib */,
 				6A2747342899505D0077EFAA /* BeerCollectionViewCell.swift */,
 				6A2747352899505D0077EFAA /* BeerCollectionViewCell.xib */,
 				6AE7BB94289806FE00CDB691 /* BeerViewController.swift */,
@@ -223,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A2747372899505D0077EFAA /* BeerCollectionViewCell.xib in Resources */,
+				6A27477B289AC7EC0077EFAA /* ImageSearchCollectionViewCell.xib in Resources */,
 				6AE7BB84289384D100CDB691 /* SCDream3.otf in Resources */,
 				6AE7BB86289384D100CDB691 /* SCDream1.otf in Resources */,
 				6A68FA312890DD7500AF6851 /* LaunchScreen.storyboard in Resources */,
@@ -248,9 +258,11 @@
 				6AE7BB7C28923ACF00CDB691 /* WebViewController.swift in Sources */,
 				6A68FA252890DD7300AF6851 /* AppDelegate.swift in Sources */,
 				6A68FA392890E1F700AF6851 /* SearchViewController.swift in Sources */,
+				6A274777289A09430077EFAA /* ImageSearchViewController.swift in Sources */,
 				6AAA2ACF2892237800901551 /* LottoViewController.swift in Sources */,
 				6AE7BB7E28935D4C00CDB691 /* LocationViewController.swift in Sources */,
 				6A68FA272890DD7300AF6851 /* SceneDelegate.swift in Sources */,
+				6A27477A289AC7EC0077EFAA /* ImageSearchCollectionViewCell.swift in Sources */,
 				6AE7BB7A2892306600CDB691 /* TranslateViewController.swift in Sources */,
 				6AAA2ACD28920CD600901551 /* ViewPresentableProtocol.swift in Sources */,
 				6A2747362899505D0077EFAA /* BeerCollectionViewCell.swift in Sources */,
