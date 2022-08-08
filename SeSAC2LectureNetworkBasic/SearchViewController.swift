@@ -9,6 +9,7 @@ import UIKit
 
 import Alamofire
 import SwiftyJSON
+import JGProgressHUD
 
 /*
  Swift Protocol
@@ -89,6 +90,11 @@ class SearchViewController: UIViewController, ViewPresentableProtocol, UITableVi
     func requestBoxOffice(text: String) {
         
         list.removeAll()
+        
+        let hud = JGProgressHUD()
+        hud.textLabel.text = "Loading"
+        hud.show(in: self.view)
+        hud.dismiss(afterDelay: 3.0)
         
         let url = "\(EndPoint.boxOfficeURL)key=\(APIKey.BOXOFFICE)&targetDt=\(text)"
         AF.request(url, method: .get).validate(statusCode: 200..<299).responseJSON { response in

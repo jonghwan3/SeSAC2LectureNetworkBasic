@@ -341,6 +341,31 @@
                                     <action selector="notificationButtonClicked:" destination="5Ne-Tv-YvD" eventType="touchUpInside" id="n8d-0M-W3D"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Za2-7G-XN6">
+                                <rect key="frame" x="87" y="213" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W4O-oB-cmr">
+                                <rect key="frame" x="87" y="328" width="241" height="221"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQs-VF-mci">
+                                <rect key="frame" x="87" y="602" width="241" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="downloadImage:" destination="5Ne-Tv-YvD" eventType="touchUpInside" id="Qxt-5e-v5p"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LdN-hm-6Bk">
+                                <rect key="frame" x="197" y="214" width="131" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jLa-rf-yYt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -350,10 +375,13 @@
                             <constraint firstItem="6tJ-i1-Qa4" firstAttribute="top" secondItem="jLa-rf-yYt" secondAttribute="top" constant="20" id="xbS-Bv-M53"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="W4O-oB-cmr" id="eoQ-Eq-6Rh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afZ-Ub-zm3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3652" y="100"/>
+            <point key="canvasLocation" x="3650.7246376811595" y="99.776785714285708"/>
         </scene>
         <!--Image Search View Controller-->
         <scene sceneID="Fnn-hl-Ojq">
